@@ -3,16 +3,80 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Kathlen Pehl's GitHub Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Kathlen Pehl's GitHub Portfolio</title>
 </head>
 
 <body>
     <header>
-        <h1>Kathleen Pehl's Profile</h1>
+        <h1><a href="./index.html">Kathleen Pehl's Portfolio</a></h1>
+        <!--navigation-->
+        <nav>
+            <ul>
+                <li>
+                    <!--About Me-->
+                    <a href="#about-me">About Me</a>
+                </li>
+                <li>
+                    <!--Projects-->
+                    <a href="#projects">Projects</a>
+                </li>
+                <li>
+                    <!--Contact Me-->
+                    <a href="#contact">Contact Me</a>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <p><img src="./assets/images/profile-picture.jpg" width = "25%" alt="headshot next to a tree in the spring" /></p>
-    <p>This is where I will be building my profile and portfolio.</p>
 
+    <!--About Me-->
+    <section id="about-me" class="about-me">
+        <div class="flex-row"><h2 class="section-title">About Me</h2></div>
+        <div>
+            <p><img src="./assets/images/profile-picture.jpg" width = "15%" alt="headshot next to a tree in the spring" /></p>
+            <p>This is where I will be building my profile and portfolio.</p>
+        </div>
+    </section>
+
+    <!--Projects-->
+    <section id="projects" class="projects">
+        <div class="flex-row"><h2 class="section-title">Projects</h2></div>
+        <div class="project-grid-wrapper">
+            <div class="project-grid-container">
+                <!--Project Grid-->
+                <div class="project-grid-item large">
+                    <a href="https://github.com/kpehl/run-buddy"><img src="./assets/images/run-buddy-hero-screenshot.jpg"></a>
+                    <p>A landing page for a fictional fitness company</p>
+                </div>
+                <div class="project-grid-item">
+                    <a href="https://github.com/kpehl/horiseon-refactor"><img src="./assets/images/horiseon-screenshot.jpg"></a>
+                    <p>Refactoring a landing page for accessibility</p>
+                </div>
+                <div class="project-grid-item">
+                    Placeholder
+                </div>
+                <div class="project-grid-item">
+                    Placeholder
+                </div>
+                <div class="project-grid-item">
+                    Placeholder
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Contact Me-->
+    <section id="contact" class="contact">
+        <div class="flex-row"><h2 class="section-title secondary-border">Contact Me</h2></div>
+        <div class="contact-info">
+            <address>
+                Email: <a href="mailto:kathleen.pehl@gmail.com">kathleen.pehl@gmail.com</a>
+                Cell Phone: <a href="tel:+14259536252">(425) 953-6252</a>
+            </address>
+        </div>
+
+    </section>
 
 </body>
 
