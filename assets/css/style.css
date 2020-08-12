@@ -179,13 +179,22 @@ section {
     left: 16px;
     background-color: var(--secondary-color);
     color: var(--primary-color);
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 2px;
+    width: 50%;
+    opacity: 0.85;
 }
 
 .project-caption h3 {
     background: lightgrey;
     color: var(--secondary-color);
+}
+
+/* Add an effect for hovering on a project to emphasize cursor position */
+.project-grid-item:hover {
+    content: "";
+    background: ivory;
+    opacity: 0.85;
+    border: 5px solid var(--tertiary-color);
 }
 
 /* --------------------------------------------- */
