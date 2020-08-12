@@ -33,7 +33,7 @@ body {
 /* Header Style */
 /* --------------------------------------------- */
 header {
-    padding: 20px 35px;
+    padding: 10px 35px;
     background-color: var(--tertiary-color);
     background-attachment: fixed;
     display: flex;
@@ -99,9 +99,10 @@ section {
     font-size: 48px;
     color: var(--secondary-color);
     border-bottom: 3px solid;
+    padding-top: 10px;
     padding-bottom: 20px;
     text-align: left;
-    margin: 0 auto 35px auto;
+    margin: 10px auto 35px auto;
     width: 85%;
 }
 
@@ -126,6 +127,11 @@ section {
     font-size: 20px;
     margin: 0 auto;
     text-align: center;
+}
+.about-me img{
+    display: inline-flex;
+    width: 15%;
+    justify-content: center;
 }
 
 /* --------------------------------------------- */
@@ -189,7 +195,7 @@ section {
     color: var(--secondary-color);
 }
 
-/* Add an effect for hovering on a project to emphasize cursor position */
+/* Add an effect when hovering on a project to emphasize cursor position */
 .project-grid-item:hover {
     content: "";
     background: ivory;
@@ -260,6 +266,9 @@ section {
     .section-title {
         width: 80%;
     }
+    .about-me img {
+        width: 25%;
+    }
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
@@ -274,6 +283,9 @@ section {
     .project-grid-item.large {
         grid-column: 1 / -1;
     }
+    .about-me img {
+        width: 35%;
+    }
 }
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
@@ -281,6 +293,8 @@ section {
     /* This will be applied on any screen smaller than 575px */
     .section-title {
         width: 95%;
+        justify-content: center;
+        text-align: center;
     }
     .about-me p {
         width: 100%;
@@ -294,10 +308,14 @@ section {
     .project-grid-item.large {
         grid-column: 1;
     }
-    .contact-info {
+    .contact {
         text-align: center;
     }
-    .contact-info > * {
-        flex: 0 100%;
+    .contact-info {
+        text-align: center;
+        justify-content: space-around;
+    }
+    .about-me img {
+        width: 45%;
     }
 }
