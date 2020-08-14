@@ -1,7 +1,11 @@
-# kpehl.github.io
+# Kathleen Pehl's GitHub Portfolio
 
-This is where my personal GitHub page will be built.  Initialized on 6 August 2020.
+## Page Description
+This is where my personal GitHub portfolio resides. There are sections for a short biography, projects I have worked on, and means of contacting me.
 
-August 11 - added content for projects, contact me, and added css styling.
-
+## Page Link
 Page is hosted at  https://kpehl.github.io/
+
+## Screenshot
+![screenshot](https://kpehl.github.io/assets/images/KathleenPehlGitHubPortfolio.jpg)
+
