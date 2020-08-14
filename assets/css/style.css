@@ -43,6 +43,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 9999;
+    opacity: 0.9;
 }
 
 /* style for h1 inside <header> */
@@ -115,6 +116,21 @@ section {
 }
 
 /* --------------------------------------------- */
+/* Hero Style */
+/* --------------------------------------------- */
+.hero {
+    background-image: url(../images/cherryblossoms.jpg);
+    background-size: cover;
+    background-position: 70%;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 150px;
+}
+
+/* --------------------------------------------- */
 /* About Me Style */
 /* --------------------------------------------- */
 .about-me{
@@ -152,20 +168,24 @@ section {
     grid-template-columns: repeat(3, 1fr);
     color: var(--secondary-color);
     font-size: 1.2rem;
+    grid-gap: 20px;
+    grid-auto-flow: dense;
 }
 .project-grid-item {
-    padding: 15px 0;
+    padding: 25px 0;
     border: 2px solid var(--secondary-color);
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     text-align: center;
     flex-wrap: wrap;
     position: relative;
+    overflow: hidden;
 }
 
 .project-grid-item img{
-    width: 100%;
+    width: 85%;
     vertical-align: middle;
 }
 
@@ -181,13 +201,14 @@ section {
 
 .project-caption {
     position: absolute;
-    bottom: 16px;
-    left: 16px;
+    bottom: 5px;
+    left: 5px;
     background-color: var(--secondary-color);
     color: var(--primary-color);
     padding: 2px;
     width: 50%;
     opacity: 0.85;
+    border-radius: 5px;
 }
 
 .project-caption h3 {
