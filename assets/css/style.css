@@ -166,6 +166,7 @@ section {
     width: 80%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     color: var(--secondary-color);
     font-size: 1.2rem;
     grid-gap: 20px;
@@ -179,7 +180,7 @@ section {
     align-items: center;
     justify-content: space-around;
     text-align: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     position: relative;
     overflow: hidden;
 }
@@ -196,7 +197,7 @@ section {
 
 .large {
     grid-column: span 2;
-    grid-row: span 1;
+    grid-row: span 2;
 }
 
 .project-caption {
