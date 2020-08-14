@@ -29,6 +29,11 @@ body {
     display: flex;
 }
 
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
 /* --------------------------------------------- */
 /* Header Style */
 /* --------------------------------------------- */
@@ -99,12 +104,15 @@ section {
 .section-title {
     font-size: 48px;
     color: var(--secondary-color);
-    border-bottom: 3px solid;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    border-right: 3px solid;
+    padding: 10px 25px 20px 5px;
     text-align: left;
-    margin: 10px auto 35px auto;
-    width: 85%;
+    margin: 10px 25px 10px 25px;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-self: flex-start;
+    justify-content: flex-start;
 }
 
 .primary-border {
@@ -135,19 +143,32 @@ section {
 /* --------------------------------------------- */
 .about-me{
     background: var(--primary-color);
+    display: inline-flex;
+    flex-direction: row;
 }
-.about-me p {
+.about-me-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.about-me-info {
     line-height: 1.7;
     color: var(--tertiary-color);
     width: 80%;
     font-size: 20px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
 }
 .about-me img{
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
     width: 15%;
-    justify-content: center;
+    justify-content: left;
 }
 
 /* --------------------------------------------- */
@@ -155,9 +176,12 @@ section {
 /* --------------------------------------------- */
 .projects {
     background: var(--primary-color);
+    display: inline-flex;
+    flex-direction: row;
 }
 .project-grid-wrapper {
-    display: flex;
+    display: inline-flex;
+    flex-direction: column;
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
@@ -166,7 +190,7 @@ section {
     width: 80%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
     color: var(--secondary-color);
     font-size: 1.2rem;
     grid-gap: 20px;
@@ -180,13 +204,13 @@ section {
     align-items: center;
     justify-content: space-around;
     text-align: center;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     position: relative;
     overflow: hidden;
 }
 
 .project-grid-item img{
-    width: 85%;
+    width: 100%;
     vertical-align: middle;
 }
 
@@ -231,22 +255,21 @@ section {
 /* --------------------------------------------- */
 .contact {
     background: var(--tertiary-color);
+    display: flex;
+    flex-direction: row;
+    flex: 0 1;
+}
+.contact-wrapper {
+    /* display: inline-flex; */
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+    justify-content: left;
+    flex-wrap: wrap;
 }
 .contact h2 {
     color: var(--secondary-color);
-}
-
-.contact-info {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 80%;
-    padding: 10px 30px;
-}
-
-.contact-info > * {
-    flex: 1;
-    margin: 15px;
 }
 
 .contact-info h3 {
@@ -254,15 +277,31 @@ section {
     font-size: 32px;
 }
 
-.contact-info p {
-    margin: 20px 50px;
+.contact-grid-container {
+    padding: 25px 0;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    grid-gap: 20px;
+    grid-auto-flow: dense;
+    flex-wrap: wrap;
+}
+.contact-info-item {
+    margin: auto;
+    padding: auto;
+    width: 80%;
     line-height: 1.5;
     font-size: 16px;
     font-style: normal;
     color: var(--primary-color);
+    flex-wrap: wrap;
 }
 
-.contact-info a {
+.contact-info-item a {
     color: var(--primary-color);
 }
 
@@ -292,6 +331,9 @@ section {
     .about-me img {
         width: 25%;
     }
+    .section-title {
+        font-size: 35px;
+    }
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
@@ -300,18 +342,28 @@ section {
     section {
         padding: 30px 15px;
     }
-    .project-grid-container {
-        grid-template-columns: 1fr 1fr;
-    }
-    .project-grid-item.large {
-        grid-column: 1 / -1;
+    .section-title {
+        font-size: 30px;
     }
     .about-me img {
         width: 35%;
     }
+    .project-grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .project-grid-item {
+        flex: 1 1;
+    }
+    .project-grid-item.large {
+        flex: 1 1;
+        grid-column: 1 / -1;
+    }
     .project-caption {
-        font-size: 18px;
-        width: 55%;
+        font-size: 15px;
+        width: 75%;
+    }
+    .contact-grid-container {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -319,15 +371,14 @@ section {
 @media screen and (max-width: 575px) {
     /* This will be applied on any screen smaller than 575px */
     .section-title {
-        width: 95%;
-        justify-content: center;
-        text-align: center;
-    }
-    .about-me p {
-        width: 100%;
+        width: 75%;
+        font-size: 25px;
+        justify-content: left;
+        text-align: left;
+        flex: 0 1;
     }
     .projects {
-        flex: 0 100%;
+        flex: 0 1;
     }
     .project-grid-container {
         grid-template-columns: 1fr;
@@ -335,14 +386,13 @@ section {
     .project-grid-item.large {
         grid-column: 1;
     }
-    .contact {
-        text-align: center;
-    }
-    .contact-info {
-        text-align: center;
-        justify-content: space-around;
-    }
     .about-me img {
         width: 45%;
+    }
+    .contact {
+        flex: 0 1;
+    }
+    .contact-info-item {
+        font-size: 13px;
     }
 }
