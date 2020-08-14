@@ -196,7 +196,7 @@ section {
 
 .large {
     grid-column: span 2;
-    grid-row: span 2;
+    grid-row: span 1;
 }
 
 .project-caption {
@@ -209,6 +209,7 @@ section {
     width: 50%;
     opacity: 0.85;
     border-radius: 5px;
+    flex-wrap: wrap;
 }
 
 .project-caption h3 {
@@ -306,6 +307,10 @@ section {
     }
     .about-me img {
         width: 35%;
+    }
+    .project-caption {
+        font-size: 18px;
+        width: 55%;
     }
 }
 
