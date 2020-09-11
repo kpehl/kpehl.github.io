@@ -217,6 +217,7 @@ section {
 .project-grid-item p {
     background: lightgrey;
     color: var(--secondary-color);
+    font-size: small;
 }
 
 .large {
