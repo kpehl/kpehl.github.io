@@ -246,7 +246,7 @@ section {
 /* Add an effect when hovering on a project to emphasize cursor position */
 .project-grid-item:hover {
     content: "";
-    background: ivory;
+    background: lightsteelblue;
     opacity: 0.85;
     border: 5px solid var(--tertiary-color);
 }
