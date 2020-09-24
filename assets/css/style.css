@@ -34,6 +34,10 @@ body {
     flex-direction: column;
 }
 
+.hide {
+    display: none;
+}
+
 /* --------------------------------------------- */
 /* Header Style */
 /* --------------------------------------------- */
@@ -105,7 +109,7 @@ section {
     font-size: 48px;
     color: var(--secondary-color);
     border-right: 3px solid;
-    padding: 10px 25px 20px 5px;
+    padding: 10px 20px 20px 5px;
     text-align: left;
     margin: 10px 25px 10px 25px;
     width: 100%;
@@ -115,12 +119,22 @@ section {
     justify-content: flex-start;
 }
 
+.section-title span {
+    font-size: 14px;
+    flex-wrap: wrap;
+}
+
 .primary-border {
     border-color: var(--primary-color);
 }
 
 .secondary-border {
     border-color: var(--tertiary-color);
+}
+
+a {
+    text-decoration-style: double;
+    color: var(--secondary-color);
 }
 
 /* --------------------------------------------- */
@@ -209,6 +223,10 @@ section {
     overflow: hidden;
 }
 
+.project-grid-item > div {
+    flex: 1;
+}
+
 .project-grid-item img{
     width: 100%;
     vertical-align: middle;
@@ -238,6 +256,19 @@ section {
     flex-wrap: wrap;
 }
 
+.project-caption-2 {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 2px;
+    width: 45%;
+    opacity: 0.85;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+
 .project-caption h3 {
     background: lightgrey;
     color: var(--secondary-color);
@@ -249,6 +280,11 @@ section {
     background: lightsteelblue;
     opacity: 0.85;
     border: 5px solid var(--tertiary-color);
+}
+
+/* When the project is hovered on, a child div with links is shown */
+.project-grid-item:hover > .hide {
+    display: block;
 }
 
 /* --------------------------------------------- */
@@ -366,6 +402,14 @@ section {
     .contact-grid-container {
         grid-template-columns: 1fr;
     }
+    .project-caption {
+        position: relative;
+    }
+    .project-caption-2 {
+        font-size: 20px;
+        width: 100%;
+        position: relative;
+    }
 }
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
@@ -395,5 +439,21 @@ section {
     }
     .contact-info-item {
         font-size: 13px;
+    }
+    .project-caption {
+        display: none;
+    }
+    .project-caption-2 {
+        font-size: 20px;
+        width: 100%;
+        display: block;
+    }
+}
+
+/* For devices that don't support hover, remove the hover effect for showing the caption and links on projects */
+
+@media (hover:none), (hover:on-demand) {
+    .hide {
+        display: block;
     }
 }
