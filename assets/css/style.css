@@ -10,6 +10,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 /* default body style */
@@ -67,6 +69,7 @@ header h1 {
     font-weight: bold;
     font-size: 36px;
     color: var(--primary-color);
+    background-color: var(--tertiary-color);
     margin: 0;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -75,6 +78,7 @@ header h1 {
 header a {
     text-decoration: none;
     color: var(--primary-color);
+    background-color: var(--tertiary-color);
 }
 
 /* style for <nav> elements in the header */
@@ -110,6 +114,7 @@ header nav ul li a:hover {
 /* --------------------------------------------- */
 section { 
     padding: 60px;
+    background: var(--primary-color);
 }
 
 .section-title {
@@ -186,6 +191,95 @@ a {
     width: 15%;
     justify-content: left;
 }
+
+/* --------------------------------------------- */
+/* Skills Style */
+/* --------------------------------------------- */
+.skills{
+    background: var(--primary-color);
+    display: inline-flex;
+    flex-direction: row;
+}
+.skills-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.skills-info {
+    line-height: 1.7;
+    color: var(--tertiary-color);
+    width: 100%;
+    font-size: 25px;
+    padding: 0px 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+/* --------------------------------------------- */
+/* Tooltip Styles
+/* --------------------------------------------- */
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+  }
+  
+  /* Hide the tooltip content by default */
+  [data-tooltip]:before,
+  [data-tooltip]:after {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* Position tooltip above the element */
+  [data-tooltip]:before {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-bottom: 5px;
+    margin-left: -80px;
+    padding: 7px;
+    width: 160px;
+    border-radius: 3px;
+    background-color: #000;
+    background-color: hsla(0, 0%, 20%, 0.9);
+    color: #fff;
+    content: attr(data-tooltip);
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  
+  /* Triangle to point the tooltip */
+  [data-tooltip]:after {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    border-top: 5px solid #000;
+    border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+  }
+  
+  /* Show tooltip content on hover */
+  [data-tooltip]:hover:before,
+  [data-tooltip]:hover:after {
+    visibility: visible;
+    opacity: 1;
+  }
 
 /* --------------------------------------------- */
 /* Projects Style */
@@ -307,6 +401,7 @@ a {
 /* --------------------------------------------- */
 .contact {
     background: var(--tertiary-color);
+    color: var(--primary-color);
     display: flex;
     flex-direction: row;
     flex: 0 1;
@@ -318,17 +413,22 @@ a {
     margin: auto;
     justify-content: left;
     flex-wrap: wrap;
+    background: var(--tertiary-color);
+    color: var(--primary-color);
 }
 .contact h2 {
     color: var(--secondary-color);
+    background: var(--tertiary-color);
 }
 
 .contact-info h3 {
     color: var(--primary-color);
+    background: var(--tertiary-color);
     font-size: 32px;
 }
 .contact-info-wrapper {
     width: 100%;
+    background: var(--tertiary-color);
 }
 .contact-grid-container {
     padding: 25px 0;
@@ -338,6 +438,7 @@ a {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     color: var(--secondary-color);
+    background: var(--tertiary-color);
     font-size: 1.2rem;
     grid-gap: 20px;
     grid-auto-flow: dense;
@@ -351,11 +452,13 @@ a {
     font-size: 16px;
     font-style: normal;
     color: var(--primary-color);
+    background: var(--tertiary-color);
     flex-wrap: wrap;
 }
 
 .contact-info-item a {
     color: var(--primary-color);
+    background: var(--tertiary-color);
 }
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
@@ -408,6 +511,9 @@ a {
         position: static;
         justify-self: flex-start;
     }
+    .skills-info h2 {
+        font-size: 25px;
+    }
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
@@ -452,6 +558,9 @@ a {
         justify-self: flex-start;
         justify-content: flex-start;
     }
+    .skills-info h2 {
+        font-size: 25px;
+    }
 }
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
@@ -491,6 +600,9 @@ a {
         width: 100%;
         display: block;
         justify-self: flex-start;
+    }
+    .skills-info h2 {
+        font-size: 20px;
     }
 }
 
