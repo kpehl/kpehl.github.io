@@ -17,6 +17,10 @@ body {
     color: var(--tertiary-color);
     font-family: Helvetica, Arial, sans-serif;
 }
+.icon {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
 
 /* utility classes */
 .text-left {
