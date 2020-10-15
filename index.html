@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="assets/images/favicon/favicon-96x96.png" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Kathleen Pehl's GitHub Portfolio</title>
 </head>
@@ -48,20 +49,26 @@
                 <img src="./assets/images/profile-picture.jpg" alt="a headshot of me next to a tree in the spring" />
             </div>
             <div class="about-me-info">
-                    My name is Kathleen Pehl, and I am working on becoming a full stack web developer. I created my first basic HTML web page in 
-                    1999 while studying engineering at the University of Colorado at Boulder, and ever since I have been tinkering with web design. 
-                    I spent close to two decades working as an aerospace engineer, primarily in systems design, and did some coding in MATLAB, 
-                    Visual Basic, Python, and C++ to help with various tasks and projects. I am currently versed in JavaScript, jQuery, Web APIs and AJAX, 
-                    HTML, CSS and Bootstrap, responsive design, and designing for accessibility. By the end of January, I will have gained familiarity with 
-                    a number of front end and back end tools and methodologies, including object oriented programing, SQL, object relational 
-                    mapping, MVC, React, and MERN.  I look forward to bringing my coding skills, systems level thinking, and work ethic to your projects!
+                    <p>
+                        My name is Kathleen Pehl, and I am working on becoming a full stack web developer. I created my first basic HTML web page in 
+                        1999 while studying engineering at the University of Colorado at Boulder, and ever since I have been tinkering with web design. 
+                        I spent close to two decades working as an aerospace engineer, primarily in systems design, and did some coding in MATLAB, 
+                        Visual Basic, Python, and C++ to help with various tasks and projects. I am currently versed in JavaScript (ES5 and ES6), jQuery, 
+                        Web APIs and AJAX, Node and common npm packages, Express.js, HTML, CSS and frameworks such as Bootstrap and Bulma, using Object 
+                        Oriented Design and Test Driven Design methodologies, responsive and mobile first design, and designing for accessibility. 
+                    </p>
+                    <p>
+                        By the end of January, I will have gained familiarity with a number of other front end and back end tools and methodologies, 
+                        including SQL, object relational mapping, MVC, React, and MERN.  I look forward to bringing my coding skills, systems level 
+                        thinking, and work ethic to your projects!
+                    </p> 
             </div>
         </div>
     </section>
 
     <!--Projects Grid-->
     <section id="projects" class="projects">
-        <div class="projects"><h2 class="section-title">Projects</h2></div>
+        <div class="projects"><h2 class="section-title">Featured Projects</h2></div>
         <div class="project-grid-wrapper">
             <div class="project-grid-container">
                 <!--Project Grid-->
@@ -72,7 +79,17 @@
                         <p>An app to search for and save recipes and create a shopping list. JavaScript/jQuery / AJAX / Bulma / HTML / CSS.</p>
                     </div>
                     <div class = "hide project-caption-2">
-                        <a href = "https://github.com/kpehl/ucf-project-1" target="_blank">GitHub Repository</a> / <a href = "https://kpehl.github.io/ucf-project-1/" target="_blank">Deployed Application</a>
+                        <a href = "https://github.com/kpehl/ucf-project-1" target="_blank">GitHub Repository</a> <br><br> <a href = "https://kpehl.github.io/ucf-project-1/" target="_blank">Deployed Application</a>
+                    </div>
+                </div>
+                <div class="project-grid-item">
+                    <img src = "./assets/images/Note-Taker-Screenshot.png" alt="screenshot of note taker application">
+                    <div class="hide project-caption">
+                        <h3>Note Taker</h3>
+                        <p>A simple note application that allows a user to write, edit, and delete notes on a server. JavaScript / Node / Express.js / HTML / CSS.</p>
+                    </div>
+                    <div class ="hide project-caption-2">
+                        <a href = "https://github.com/kpehl/note-taker" target="_blank">GitHub Repository</a> <br><br>  <a href = "https://thawing-sands-67516.herokuapp.com/" target="_blank">Deployed Application</a>
                     </div>
                 </div>
                 <div class="project-grid-item">
@@ -82,7 +99,7 @@
                         <p>A dynamically updated weather dashboard. JavaScript / AJAX / Bootstrap / HTML / CSS.</p>
                     </div>
                     <div class ="hide project-caption-2">
-                        <a href = "https://github.com/kpehl/weather-dashboard" target="_blank">GitHub Repository</a> / <a href = "https://kpehl.github.io/weather-dashboard/" target="_blank">Deployed Application</a>
+                        <a href = "https://github.com/kpehl/weather-dashboard" target="_blank">GitHub Repository</a> <br><br>  <a href = "https://kpehl.github.io/weather-dashboard/" target="_blank">Deployed Application</a>
                     </div>
                 </div>
                 <div class="project-grid-item">
@@ -92,7 +109,7 @@
                         <p>A scheduling app for work days. JavaScript / jQuery / Web APIs / HTML / CSS.</p>
                     </div>
                     <div class ="hide project-caption-2">
-                        <a href = "https://github.com/kpehl/work-day-scheduler" target="_blank">GitHub Repository</a> / <a href = "https://kpehl.github.io/work-day-scheduler/" target="_blank">Deployed Application</a>
+                        <a href = "https://github.com/kpehl/work-day-scheduler" target="_blank">GitHub Repository</a> <br><br>  <a href = "https://kpehl.github.io/work-day-scheduler/" target="_blank">Deployed Application</a>
                     </div>
                 </div>
                 <div class="project-grid-item">
@@ -102,29 +119,29 @@
                         <p>A task tracking application with dynamic due date tracking. JavaScript/ Web APIs / HTML / CSS.</p>
                     </div>
                     <div class ="hide project-caption-2">
-                        <a href = "https://github.com/kpehl/taskmaster-pro" target="_blank">GitHub Repository</a> / <a href = "https://kpehl.github.io/taskmaster-pro/" target="_blank">Deployed Application</a>
+                        <a href = "https://github.com/kpehl/taskmaster-pro" target="_blank">GitHub Repository</a> <br><br>  <a href = "https://kpehl.github.io/taskmaster-pro/" target="_blank">Deployed Application</a>
                     </div>
                 </div>
-                <div class="project-grid-item">
+                <div hidden class="project-grid-item">
                     <img src = "./assets/images/JavaScriptQuizQuestion.png" alt="screenshot of JavaScript Quiz, mid-quiz">
                     <div class="hide project-caption">
                         <h3>JavaScript Quiz</h3>
                         <p>A dynamically updated multiple choice quiz on JavaScript. JavaScript / HTML / CSS.</p>
                     </div>
                     <div class ="hide project-caption-2">
-                        <a href = "https://github.com/kpehl/javascript-quiz" target="_blank">GitHub Repository</a> / <a href = "https://kpehl.github.io/javascript-quiz/index.html" target="_blank">Deployed Application</a>
+                        <a href = "https://github.com/kpehl/javascript-quiz" target="_blank">GitHub Repository</a> <br><br> <a href = "https://kpehl.github.io/javascript-quiz/index.html" target="_blank">Deployed Application</a>
                     </div>
                 </div>
-                <!-- <div class = "project-grid-item">
+                <div hidden class = "project-grid-item">
                     <img src = "./assets/images/Taskinator.png" alt = "screenshot of a simple dynamically updated task tracking application">
                     <div class="hide project-caption">
                         <h3>Taskinator</h3>
                         <p>A simple, dynamically user updated task tracking application. JavaScript / HTML / CSS.</p>
                     </div>
                     <div class ="hide project-caption-2">
-                        <a href = "https://github.com/kpehl/taskinator" target="_blank">GitHub Repository</a> / <a href = "https://kpehl.github.io/taskinator/" target="_blank">Deployed Application</a>
+                        <a href = "https://github.com/kpehl/taskinator" target="_blank">GitHub Repository</a> <br><br>  <a href = "https://kpehl.github.io/taskinator/" target="_blank">Deployed Application</a>
                     </div>
-                </div> -->
+                </div>
                 <div class = "project-grid-item">
                     <img src = "./assets/images/PasswordGeneratorScreenshot.png" alt = "screenshot of a random password generator">
                     <div class="hide project-caption">
@@ -132,55 +149,55 @@
                         <p>A non-cryptographically secure customizable random password generator. JavaScript.</p>
                     </div>
                     <div class ="hide project-caption-2">
-                        <a href = "https://github.com/kpehl/password-generator" target="_blank">GitHub Repository</a> / <a href = "https://kpehl.github.io/password-generator/Develop/" target="_blank">Deployed Application</a>
+                        <a href = "https://github.com/kpehl/password-generator" target="_blank">GitHub Repository</a> <br><br>  <a href = "https://kpehl.github.io/password-generator/Develop/" target="_blank">Deployed Application</a>
                     </div>
                 </div>
-                <!-- <div class = "project-grid-item">
+                <div hidden class = "project-grid-item">
                     <img src = "./assets/images/RobotGladiatorsScreenshot.png" alt = "screenshot of the prompt-based browser game Robot Gladiators">
                     <div class="hide project-caption">
                         <h3>Robot Gladiators</h3>
                         <p>A simple prompt-based game with a user controlled robot battling a series of opponents. JavaScript.</p>
                     </div>
                     <div class ="hide project-caption-2">
-                        <a href = "https://github.com/kpehl/robot-gladiators" target="_blank">GitHub Repository</a> / <a href = "https://kpehl.github.io/robot-gladiators/" target="_blank">Deployed Application</a>
+                        <a href = "https://github.com/kpehl/robot-gladiators" target="_blank">GitHub Repository</a> <br><br>  <a href = "https://kpehl.github.io/robot-gladiators/" target="_blank">Deployed Application</a>
                     </div>
-                </div> -->
-                <!-- <div class="project-grid-item">
+                </div>
+                <div hidden class="project-grid-item">
                     <img src="./assets/images/run-buddy-hero-screenshot.jpg" alt="screenshot of Run Buddy landing page" />
                     <div class="hide project-caption">
                         <h3>Run Buddy</h3>
                         <p>A landing page for a fictional fitness company. HTML / CSS.</p>
                     </div>
                     <div class ="hide project-caption-2">
-                        <a href = "https://github.com/kpehl/run-buddy" target="_blank">GitHub Repository</a> / <a href = "https://kpehl.github.io/run-buddy/" target="_blank">Deployed Application</a>
+                        <a href = "https://github.com/kpehl/run-buddy" target="_blank">GitHub Repository</a> <br><br>  <a href = "https://kpehl.github.io/run-buddy/" target="_blank">Deployed Application</a>
                     </div>
-                </div> -->
-                <!-- <div class="project-grid-item">
+                </div>
+                <div hidden class="project-grid-item">
                     <img src="./assets/images/horiseon-screenshot.jpg" alt="screenshot of Horiseon landing page" />
                     <div class="hide project-caption">
                         <h3>Horiseon</h3>
                         <p>Refactoring a fictional landing page for accessibility. HTML / CSS.</p>
                     </div>
                     <div class ="hide project-caption-2">
-                        <a href = "https://github.com/kpehl/horiseon-refactor" target="_blank">GitHub Repository</a> / <a href = "https://github.com/kpehl/horiseon-refactor" target="_blank">Deployed Application</a>
+                        <a href = "https://github.com/kpehl/horiseon-refactor" target="_blank">GitHub Repository</a> <br><br>  <a href = "https://github.com/kpehl/horiseon-refactor" target="_blank">Deployed Application</a>
                     </div>
-                </div> -->
-                <!-- <div class="project-grid-item">
+                </div>
+                <div hidden class="project-grid-item">
                     <img src="./assets/images/bluestyle-css-demo-screenshot.png" alt="screenot of CSS demo page" />
                     <div class="project-caption">
                         <h3>CSS Demo Page</h3>
                         <p>HTML / CSS / JavaScript.</p>
                     </div>
                     <div class ="hide project-caption-2">
-                        <a href = "https://kpehl.github.io/css-color-scheme-demo/" target="_blank">GitHub Repository</a> / <a href = "https://kpehl.github.io/css-color-scheme-demo/" target="_blank">Deployed Application</a>
+                        <a href = "https://kpehl.github.io/css-color-scheme-demo/" target="_blank">GitHub Repository</a> <br><br>  <a href = "https://kpehl.github.io/css-color-scheme-demo/" target="_blank">Deployed Application</a>
                     </div>
-                </div> -->
-                <!-- <div class="project-grid-item">
+                </div>
+                <div hidden class="project-grid-item">
                     <img src="https://via.placeholder.com/150/336699/001a33?text=Placeholder" alt="placeholder image for future projects"/>
                     <div class="project-caption">
                         <p>Placeholder</p>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
     </section>
@@ -191,16 +208,16 @@
         <div class="contact-info-wrapper">
             <div class="contact-grid-container">
                 <div class="contact-info-item">
-                    Email: <a href="mailto:kathleen.pehl@gmail.com">kathleen.pehl@gmail.com</a>
+                    Email <i class="fas fa-envelope-open-text"></i> <a href="mailto:kathleen.pehl@gmail.com">kathleen.pehl@gmail.com</a>
                 </div>
                 <div class="contact-info-item">
-                    Cell Phone: <a href="tel:+14259536252">(425) 953-6252</a>
+                    Cell Phone <i class="fas fa-mobile-alt"></i> <a href="tel:+14259536252">(425) 953-6252</a>
                 </div>
                 <div class="contact-info-item">
-                    <a href="https://www.linkedin.com/in/kathleen-pehl-77bb1710" target="_blank">LinkedIn</a>
+                    <i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/kathleen-pehl-77bb1710" target="_blank">LinkedIn</a>
                 </div>
                 <div class="contact-info-item">
-                    <a href="https://github.com/kpehl" target="_blank">GitHub</a>
+                    <i class="fab fa-github"></i><a href="https://github.com/kpehl" target="_blank">GitHub</a>
                 </div>
             </div>
         </div>

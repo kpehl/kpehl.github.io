@@ -37,6 +37,9 @@ body {
 .hide {
     display: none;
 }
+div[hidden] {
+    display: none;
+}
 
 /* --------------------------------------------- */
 /* Header Style */
@@ -112,16 +115,11 @@ section {
     padding: 10px 20px 20px 5px;
     text-align: left;
     margin: 10px 25px 10px 25px;
-    width: 100%;
+    width: 240px;
     display: inline-flex;
     flex-direction: column;
     align-self: flex-start;
     justify-content: flex-start;
-}
-
-.section-title span {
-    font-size: 14px;
-    flex-wrap: wrap;
 }
 
 .primary-border {
@@ -197,18 +195,19 @@ a {
     display: inline-flex;
     flex-direction: column;
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 .project-grid-container {
-    width: 80%;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
     grid-auto-rows: minmax(100px, auto);
     color: var(--secondary-color);
     font-size: 1.2rem;
     grid-gap: 20px;
     grid-auto-flow: dense;
+    justify-content: center;
 }
 .project-grid-item {
     padding: 25px 0;
@@ -240,7 +239,6 @@ a {
 
 .large {
     grid-column: span 2;
-    grid-row: span 2;
 }
 
 .project-caption {
@@ -254,6 +252,8 @@ a {
     opacity: 0.85;
     border-radius: 5px;
     flex-wrap: wrap;
+    transition: all 0.5s ease-in-out;
+    overflow: visible;
 }
 
 .project-caption-2 {
@@ -266,12 +266,21 @@ a {
     width: 45%;
     opacity: 0.85;
     border-radius: 5px;
+    font-size: 0.8rem;
     flex-wrap: wrap;
+    transition: all 0.5s ease-in-out;
 }
 
 .project-caption h3 {
     background: lightgrey;
     color: var(--secondary-color);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.project-caption p {
+    background: lightgrey;
+    color: var(--secondary-color);
+    font-size: 0.7rem;
 }
 
 /* Add an effect when hovering on a project to emphasize cursor position */
@@ -280,11 +289,13 @@ a {
     background: lightsteelblue;
     opacity: 0.85;
     border: 5px solid var(--tertiary-color);
+    transition: all 0.5s ease-in-out;
 }
 
-/* When the project is hovered on, a child div with links is shown */
+/* When the project is hovered on, child divs with links and a title and description are shown */
 .project-grid-item:hover > .hide {
     display: block;
+    transition: all 0.5s ease-in-out;
 }
 
 /* --------------------------------------------- */
@@ -297,7 +308,6 @@ a {
     flex: 0 1;
 }
 .contact-wrapper {
-    /* display: inline-flex; */
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -313,13 +323,15 @@ a {
     color: var(--primary-color);
     font-size: 32px;
 }
-
+.contact-info-wrapper {
+    width: 100%;
+}
 .contact-grid-container {
     padding: 25px 0;
     margin: auto;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     color: var(--secondary-color);
     font-size: 1.2rem;
@@ -371,6 +383,27 @@ a {
     .section-title {
         font-size: 35px;
     }
+    .project-grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .project-grid-item {
+        flex: 1 1;
+    }
+    .project-grid-item.large {
+        flex: 1 1;
+        grid-column: 1 / -1;
+    }
+    .project-caption h3 {
+        font-size: 18px;
+    }
+    .project-caption{
+        position: static;
+        justify-self: flex-start;
+    }
+    .project-caption-2 {
+        position: static;
+        justify-self: flex-start;
+    }
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
@@ -398,17 +431,22 @@ a {
     .project-caption {
         font-size: 15px;
         width: 75%;
+        position: static;
+        justify-self: flex-start;
+        justify-content: flex-start;
+    }
+    .project-caption h3 {
+        font-size: 20px;
     }
     .contact-grid-container {
         grid-template-columns: 1fr;
     }
-    .project-caption {
-        position: relative;
-    }
     .project-caption-2 {
         font-size: 20px;
         width: 100%;
-        position: relative;
+        position: static;
+        justify-self: flex-start;
+        justify-content: flex-start;
     }
 }
 
@@ -441,12 +479,14 @@ a {
         font-size: 13px;
     }
     .project-caption {
-        display: none;
+        display: block;
+        justify-self: flex-start;
     }
     .project-caption-2 {
         font-size: 20px;
         width: 100%;
         display: block;
+        justify-self: flex-start;
     }
 }
 
