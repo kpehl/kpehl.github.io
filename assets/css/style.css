@@ -325,8 +325,9 @@ a {
 }
 
 .project-grid-item img{
-    width: 100%;
+    max-width: 100%;
     vertical-align: middle;
+    max-height: 400px;
 }
 
 .project-grid-item p {
@@ -337,6 +338,10 @@ a {
 
 .large {
     grid-column: span 2;
+}
+
+.large img {
+    max-height: 600px;
 }
 
 .project-caption {
