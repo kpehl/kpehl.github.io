@@ -464,6 +464,12 @@ a {
 .contact-info-item a {
     color: var(--primary-color);
     background: var(--tertiary-color);
+    text-decoration: none;
+}
+
+.contact-info-item i {
+    color: var(--primary-color);
+    background-color: var(--tertiary-color);
 }
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
